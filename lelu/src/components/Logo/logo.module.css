@@ -1,0 +1,11 @@
+/* src/components/logo.module.css */
+.logoContainer {
+  text-align: center; /* Centraliza a logo */
+  margin-top: 16px; /* Espaçamento superior */
+  width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+}
+
+.logoImage {
+  width: 150px; /* Define a largura da logo */
+  height: auto; /* Mantém a proporção da imagem */
+}

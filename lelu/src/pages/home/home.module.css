@@ -3,20 +3,35 @@
 .appContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Para garantir que o footer fique na parte inferior */
+  width: 100vw; /* Estende a largura para 100% */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+.toolbar {
+  background-color: #ff0000;
 }
 
 .contentContainer {
-  margin-top: 16px; /* Margem superior */
-  margin-bottom: 16px; /* Margem inferior */
-  flex-grow: 1; /* Faz o container ocupar o espaço disponível */
-  display: flex; /* Ativa o flexbox */
+  flex: 1; /* Permite que o conteúdo central ocupe o espaço restante */
+  display: flex;
   justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px; /* Espaçamento interno */
+  width: 100%; /* Garante que o conteúdo ocupe toda a largura */
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center; /* Centraliza os cartões */
+  gap: 20px; /* Espaço entre os cartões */
+  flex-wrap: wrap; /* Permite que os cartões se movam para a linha seguinte em telas menores */
+  max-width: 1200px; /* Limita a largura máxima para centralizar melhor */
+  width: 100%; /* Garante que o contêiner dos cartões ocupe toda a largura */
 }
 
 .footer {
-  padding: 24px 16px; /* Padding do rodapé */
-  background-color: #f7f7f7; /* Cor de fundo do rodapé */
-  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 20px; /* Espaçamento interno do footer */
+  background-color: #f7f7f7; /* Cor de fundo do footer */
+  text-align: center; /* Centraliza o texto no footer */
+  width: 100%; /* Garante que o footer ocupe toda a largura */
 }

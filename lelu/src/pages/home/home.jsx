@@ -1,21 +1,18 @@
-// src/pages/home/home.jsx
-
 import React from 'react';
-import { AppBar, Toolbar, Typography, Container, Box, Grid } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import CustomCard from '../../components/CustomCard.jsx';
+import SearchAppBar from '../../components/SearchAppBar/SearchAppBar.jsx';
+import Logo from '../../components/Logo/logo.jsx';
 import styles from './home.module.css'; // Importando o CSS Module
 
 function Home() {
   return (
     <Box className={styles.appContainer}>
-      {/* Header */}
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Meu Projeto com Header e Footer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      {/* Header com a nova AppBar */}
+      <SearchAppBar />
+      
+      {/* Componente Logo */}
+      <Logo /> {/* Adicionando a logo abaixo da AppBar */}
 
       {/* Conteúdo Central */}
       <Container className={styles.contentContainer}>

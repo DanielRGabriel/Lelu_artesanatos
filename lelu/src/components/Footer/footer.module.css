@@ -1,0 +1,8 @@
+/* src/components/footer.module.css */
+
+.footer {
+  padding: 20px; /* Espaçamento interno do footer */
+  background-color: #f7f7f7; /* Cor de fundo do footer */
+  text-align: center; /* Centraliza o texto no footer */
+  width: 100%; /* Garante que o footer ocupe toda a largura */
+}
