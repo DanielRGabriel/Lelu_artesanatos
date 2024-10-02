@@ -25,21 +25,21 @@ function Home() {
           {/* Chamar o CustomCard com diferentes props */}
           <Grid item xs={12} sm={6} md={4}>
             <CustomCard
-              title="Card 1"
+              title="Ecobag "
               content="Conteúdo do Card 1"
               image={cardImages[0]} // Passa a imagem correspondente
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <CustomCard
-              title="Card 2"
+              title="Carteira Solange"
               content="Conteúdo do Card 2"
               image={cardImages[1]} // Passa a imagem correspondente
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <CustomCard
-              title="Card 3"
+              title="Necessaire grande"
               content="Conteúdo do Card 3"
               image={cardImages[2]} // Passa a imagem correspondente
             />
