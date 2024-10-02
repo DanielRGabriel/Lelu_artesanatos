@@ -1,0 +1,22 @@
+/* src/pages/home/home.module.css */
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+.contentContainer {
+  margin-top: 16px; /* Margem superior */
+  margin-bottom: 16px; /* Margem inferior */
+  flex-grow: 1; /* Faz o container ocupar o espaço disponível */
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.footer {
+  padding: 24px 16px; /* Padding do rodapé */
+  background-color: #f7f7f7; /* Cor de fundo do rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+}
