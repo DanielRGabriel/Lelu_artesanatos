@@ -35,7 +35,7 @@ function Footer() {
           <Grid item xs={12} md={4} className={styles.socialMedia}>
             <Typography variant="h6" className={styles.footerHeading}>Redes Sociais</Typography>
             <IconButton
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/leluartesanatos/" // Atualizado
               target="_blank"
               aria-label="Instagram"
               className={styles.iconButton}
@@ -43,7 +43,7 @@ function Footer() {
               <Instagram className={styles.socialIcon} />
             </IconButton>
             <IconButton
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/nataliagodinhodanielribeiro" // Atualizado
               target="_blank"
               aria-label="Facebook"
               className={styles.iconButton}

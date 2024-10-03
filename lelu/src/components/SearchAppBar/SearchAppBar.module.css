@@ -11,13 +11,15 @@
 }
 
 .link {
-  color: white;
-  text-decoration: none;
+  color: white !important; /* Cor branca com !important */
+  text-decoration: none !important;
   cursor: pointer;
   font-size: 16px;
-  transition: color 0.3s ease;
+  font-weight: normal; /* Definir peso da fonte como normal */
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Transição suave para cor e peso */
 }
 
 .link:hover {
-  color: #ccc; /* Mudança de cor ao passar o mouse */
+  color: white; /* Mantém a cor branca ao passar o mouse */
+  font-weight: bold; /* Negrito ao passar o mouse */
 }

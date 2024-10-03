@@ -24,3 +24,9 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.priceText {
+  color: #ff0000;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
