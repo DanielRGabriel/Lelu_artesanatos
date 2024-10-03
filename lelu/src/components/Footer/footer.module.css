@@ -1,8 +1,29 @@
 /* src/components/footer.module.css */
 
 .footer {
-  padding: 20px; /* Espaçamento interno do footer */
-  background-color: #f7f7f7; /* Cor de fundo do footer */
-  text-align: center; /* Centraliza o texto no footer */
-  width: 100%; /* Garante que o footer ocupe toda a largura */
+  padding: 20px;
+  background-color: #ed0001;
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF; /* Define a cor branca para todo o texto no footer */
+}
+
+/* Caso queira garantir que o texto nas tipografias e links herdem a cor branca */
+.footerHeading,
+.footerLinks a,
+.socialMedia,
+.footerLinks li {
+  color: #FFFFFF !important; /* Garante que os links e títulos também fiquem brancos */
+}
+
+.footerLinks a:hover {
+  text-decoration: underline; /* Mantém o underline ao passar o mouse */
+}
+
+.socialIcon {
+  color: #FFFFFF; /* Ícones de redes sociais também brancos */
+}
+
+.copyright {
+  color: #FFFFFF;
 }
