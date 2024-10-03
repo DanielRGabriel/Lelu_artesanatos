@@ -18,6 +18,7 @@
 
 .footerLinks a:hover {
   text-decoration: underline; /* Mantém o underline ao passar o mouse */
+ 
 }
 
 .socialIcon {
@@ -26,4 +27,8 @@
 
 .copyright {
   color: #FFFFFF;
+}
+
+.footerLinks {
+   list-style-type: none ; /* Remove os pontos da lista */
 }

@@ -11,7 +11,7 @@ function Footer() {
         <Grid container spacing={4} justifyContent="center">
           {/* Links de navegação */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" className={styles.footerHeading}>Navegação</Typography>
+            <Typography variant="h6" className={styles.footerHeading}></Typography>
             <ul className={styles.footerLinks}>
               <li>
                 <Link href="/sobre-nos" underline="hover" className={styles.footerLink}>
