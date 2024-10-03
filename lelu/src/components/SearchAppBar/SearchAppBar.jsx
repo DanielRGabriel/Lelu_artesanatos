@@ -1,15 +1,14 @@
-// src/components/SearchAppBar.jsx
-
-import * as React from 'react';
+// src/components/SearchAppBar/SearchAppBar.jsx
+import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import styles from './SearchAppBar.module.css'; // Importando o CSS Module
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,35 +51,42 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar({ onCategoryClick, onSearchChange }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#ed0001' }}> {/* Aqui está a mudança */}
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
+      <AppBar position="static" sx={{ backgroundColor: '#ed0001' }}>
+        <Toolbar className={styles.toolbar}>
+          {/* Links de categorias */}
+          <Box className={styles.linksContainer}>
+            <Link className={styles.link} onClick={() => onCategoryClick(null)}>
+              Todos
+            </Link>
+            <Link className={styles.link} onClick={() => onCategoryClick('Roupas')}>
+              Roupas
+            </Link>
+            <Link className={styles.link} onClick={() => onCategoryClick('Bolsas')}>
+              Bolsas
+            </Link>
+            <Link className={styles.link} onClick={() => onCategoryClick('Acessórios')}>
+              Acessórios
+            </Link>
+            <Link className={styles.link} onClick={() => onCategoryClick('Mochilas')}>
+              Mochilas
+            </Link>
+            <Link className={styles.link} onClick={() => onCategoryClick('Diversos')}>
+              Diversos
+            </Link>
+          </Box>
+
+          {/* Campo de busca */}
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Buscar..."
               inputProps={{ 'aria-label': 'search' }}
+              onChange={(e) => onSearchChange(e.target.value)} // Passa o valor de entrada para a função onSearchChange
             />
           </Search>
         </Toolbar>

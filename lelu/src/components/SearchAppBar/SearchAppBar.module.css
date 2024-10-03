@@ -1,0 +1,23 @@
+/* src/components/SearchAppBar.module.css */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ccc; /* Mudança de cor ao passar o mouse */
+}
