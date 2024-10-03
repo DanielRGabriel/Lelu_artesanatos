@@ -6,7 +6,7 @@ import imageStyles from '../../styles/imageStyles.module.css'; // Importando os 
 
 const CustomCard = ({ title, content, price, image }) => {
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} sx={{ boxShadow: 'none', border: 'none' }}> {/* Removendo a borda e a sombra */}
       <div className={imageStyles.imageContainer}>
         <img src={image} alt={title} className={imageStyles.image} />
       </div>
@@ -14,7 +14,7 @@ const CustomCard = ({ title, content, price, image }) => {
         <Typography variant="h5">{title}</Typography>
         <Typography variant="body2">{content}</Typography>
         <Typography variant="h6" className={styles.priceText}>
-           R$ {price.toFixed(2)} {/* Exibe o preço formatado */}
+          R$ {price.toFixed(2)} {/* Exibe o preço formatado */}
         </Typography>
       </CardContent>
     </Card>
