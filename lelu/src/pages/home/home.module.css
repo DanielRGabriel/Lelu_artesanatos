@@ -35,3 +35,10 @@
   text-align: center; /* Centraliza o texto no footer */
   width: 100%; /* Garante que o footer ocupe toda a largura */
 }
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  
+}

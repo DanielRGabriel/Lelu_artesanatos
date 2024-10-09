@@ -10,9 +10,9 @@ const CustomCard = ({ title, content, price, image, altText }) => {
       <div className={imageStyles.imageContainer}>
         <img 
           src={image} 
-          alt={altText || title}  {/* Descrição alternativa mais descritiva */}
+          alt={altText || title}  
           className={imageStyles.image} 
-          tabIndex="0"  {/* Adicionando navegação via Tab */}
+          tabIndex="0" 
         />
       </div>
       <CardContent className={styles.cardContent} tabIndex="0"> {/* Centralizando o texto e adicionando tabIndex */}
