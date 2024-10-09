@@ -23,24 +23,23 @@ import necessaireDog1Image from '../../assets/ImagensProdutos/necessaire_dog1.pn
 import ecobag1Image from '../../assets/ImagensProdutos/ecobag1.png';
 import vestidoBebe2Image from '../../assets/ImagensProdutos/vestido_bebe2.png';
 
-// Adicionando categorias aos produtos
+// Adicionando categorias e descrições alternativas aos produtos
 const cardData = [
-  { title: 'Ecobag', content: 'Ecobag feita à mão', price: 49.90, image: ecobag3Image, category: 'Bolsas' },
-  { title: 'Carteira Solange', content: 'Carteira de tecido', price: 34.90, image: carteiraSolange1Image, category: 'Acessórios' },
-  { title: 'Necessaire grande', content: 'Necessaire espaçosa', price: 49.90, image: necessaireImage, category: 'Acessórios' },
-  { title: 'Bolsa Mochila', content: 'Bolsa para caminhar', price: 49.90, image: bolsaMochila2Image, category: 'Bolsas' },
-  { title: 'Bolsa Transversal', content: 'Mochila espaçosa para uso diário', price: 69.90, image: bolsaTransversal3Image, category: 'Bolsas' },
-  { title: 'Pochetes', content: 'Pochetes estampadas', price: 49.90, image: pochetelImage, category: 'Acessórios' },
-  { title: 'Absorventes de pano', content: 'Quatro tamanhos disponíveis', price: 22.90, image:absorventesImage, category: 'Diversos' },
-  { title: 'Vestido de bebê melancia', content: '3 meses a 2 anos', price: 49.90, image:vestidoBebe1Image, category: 'Roupas' },
-  { title: 'Porta Óculos', content: 'Cabem 2 óculos', price: 24.90, image: portaOculos1Image, category: 'Acessórios' },
-  { title: 'Porta Documentos', content: 'Pequena carteira', price: 14.90, image:portaDocumentos1Image, category: 'Acessórios' },
-  { title: 'Capa de caderno', content: 'Proteja seu caderno / livro', price: 39.90, image: capaCaderno2Image, category: 'Acessórios' },
-  { title: 'Pantufa', content: 'Super Confortáveis', price: 64.90, image: pantufas1Image, category: 'Acessórios' },
-  { title: 'Necessaire Compacta', content: 'Necessaire ideal para maquiagem', price: 39.90, image: necessaireDog1Image, category: 'Acessórios' },
-  { title: 'Ecobag', content: 'Ecobag feita à mão', price: 49.90, image: ecobag1Image, category: 'Bolsas' },
-  { title: 'Vestido de bebê ursinhos', content: '3 meses a 2 anos', price: 49.90, image:vestidoBebe2Image, category: 'Roupas' },
-  
+  { title: 'Ecobag', content: 'Ecobag feita à mão', price: 49.90, image: ecobag3Image, altText: 'Ecobag artesanal em tecido sustentável', category: 'Bolsas' },
+  { title: 'Carteira Solange', content: 'Carteira de tecido', price: 34.90, image: carteiraSolange1Image, altText: 'Carteira de tecido com várias divisórias', category: 'Acessórios' },
+  { title: 'Necessaire grande', content: 'Necessaire espaçosa', price: 49.90, image: necessaireImage, altText: 'Necessaire de tecido grande e espaçosa', category: 'Acessórios' },
+  { title: 'Bolsa Mochila', content: 'Bolsa para caminhar', price: 49.90, image: bolsaMochila2Image, altText: 'Bolsa tipo mochila para caminhadas', category: 'Mochilas' },
+  { title: 'Bolsa Transversal', content: 'Bolsa com 3 divisórias', price: 69.90, image: bolsaTransversal3Image, altText: 'Bolsa transversal com três divisórias', category: 'Bolsas' },
+  { title: 'Pochetes', content: 'Pochetes estampadas', price: 49.90, image: pochetelImage, altText: 'Pochete de tecido com estampa', category: 'Acessórios' },
+  { title: 'Absorventes de pano', content: 'Quatro tamanhos disponíveis', price: 22.90, image: absorventesImage, altText: 'Absorventes reutilizáveis de pano', category: 'Diversos' },
+  { title: 'Vestido de bebê melancia', content: '3 meses a 2 anos', price: 49.90, image: vestidoBebe1Image, altText: 'Vestido de bebê com estampa de melancia', category: 'Roupas' },
+  { title: 'Porta Óculos', content: 'Cabem 2 óculos', price: 24.90, image: portaOculos1Image, altText: 'Porta óculos de tecido para dois óculos', category: 'Acessórios' },
+  { title: 'Porta Documentos', content: 'Pequena carteira', price: 14.90, image: portaDocumentos1Image, altText: 'Carteira pequena para documentos', category: 'Acessórios' },
+  { title: 'Capa de caderno', content: 'Proteja seu caderno / livro', price: 39.90, image: capaCaderno2Image, altText: 'Capa protetora para caderno ou livro', category: 'Acessórios' },
+  { title: 'Pantufa', content: 'Super Confortáveis', price: 64.90, image: pantufas1Image, altText: 'Pantufa macia e confortável', category: 'Acessórios' },
+  { title: 'Necessaire Compacta', content: 'Necessaire ideal para maquiagem', price: 39.90, image: necessaireDog1Image, altText: 'Necessaire pequena com estampa de cachorro', category: 'Acessórios' },
+  { title: 'Ecobag', content: 'Ecobag feita à mão', price: 49.90, image: ecobag1Image, altText: 'Ecobag artesanal em tecido', category: 'Bolsas' },
+  { title: 'Vestido de bebê ursinhos', content: '3 meses a 2 anos', price: 49.90, image: vestidoBebe2Image, altText: 'Vestido de bebê com estampa de ursinhos', category: 'Roupas' },
 ];
 
 function Home() {
@@ -79,6 +78,7 @@ function Home() {
                 content={card.content}
                 price={card.price}
                 image={card.image}
+                altText={card.altText}  
               />
             </Grid>
           ))}

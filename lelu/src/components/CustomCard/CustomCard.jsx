@@ -4,13 +4,18 @@ import { Card, CardContent, Typography } from '@mui/material';
 import styles from './customCard.module.css'; // Importando os estilos do card
 import imageStyles from '../../styles/imageStyles.module.css'; // Importando os estilos da imagem
 
-const CustomCard = ({ title, content, price, image }) => {
+const CustomCard = ({ title, content, price, image, altText }) => {
   return (
-    <Card className={styles.card} sx={{ boxShadow: 'none', border: 'none' }}> {/* Removendo a borda e a sombra */}
+    <Card className={styles.card} sx={{ boxShadow: 'none', border: 'none' }} tabIndex="0"> {/* Removendo a borda, sombra e adicionando tabIndex */}
       <div className={imageStyles.imageContainer}>
-        <img src={image} alt={title} className={imageStyles.image} />
+        <img 
+          src={image} 
+          alt={altText || title}  {/* Descrição alternativa mais descritiva */}
+          className={imageStyles.image} 
+          tabIndex="0"  {/* Adicionando navegação via Tab */}
+        />
       </div>
-      <CardContent className={styles.cardContent}> {/* Centralizando o texto */}
+      <CardContent className={styles.cardContent} tabIndex="0"> {/* Centralizando o texto e adicionando tabIndex */}
         <Typography variant="h5">{title}</Typography>
         <Typography variant="body2">{content}</Typography>
         <Typography variant="h6" className={styles.priceText}>
