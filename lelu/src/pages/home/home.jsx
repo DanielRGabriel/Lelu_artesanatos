@@ -53,6 +53,7 @@ function Home() {
   // Função para manipular a mudança de página
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Adicionando scroll suave para o topo
   };
 
   // Função para selecionar a categoria
@@ -102,17 +103,16 @@ function Home() {
             </Grid>
           ))}
         </Grid>
-        {/* Componente de Paginação abaixo das fotos */}
-        
       </Container>
+      {/* Componente de Paginação abaixo das fotos */}
       <Box className={styles.paginationContainer}>
-          <Pagination
-            count={totalPages}
-            page={currentPage}
-            onChange={handlePageChange}
-            color="primary"
-          />
-        </Box>
+        <Pagination
+          count={totalPages}
+          page={currentPage}
+          onChange={handlePageChange} // A função de mudança de página já está configurada corretamente
+          color="primary"
+        />
+      </Box>
       <Footer />
     </Box>
   );
